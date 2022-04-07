@@ -1,10 +1,29 @@
 /* GLOBAL STYLES */
 :root {
-
+  --heading-font: "Josefin Sans", "Arial", sans-serif;
+  --text-font: "Alata", "Arial", sans-serif;
+  --text-color: #fff;
+  --special-text-color: #000;
 }
 
 /* FONT-FACE  */
+@font-face {
+  font-family: "Alata";
+  src: url("../fonts/") format("woff2"),
+  url("../fonts/Alata-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../fonts/JosefinSans-Light.woff2") format("woff2"),
+  url("../fonts/JosefinSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   box-sizing: border-box;
@@ -39,7 +58,7 @@ img {
 
 /* CONTAINER  */
 .container {
-  max-width: 1200px;
+  max-width: 1214px;
   width: 100%;
   padding-left: 50px;
   padding-right: 50px;
@@ -52,3 +71,6 @@ img {
 .main-content {
   flex-grow: 1;
 }
+
+/* SIT-HEADER  */
+
