@@ -43,9 +43,9 @@ body {
   height: 100%;
   background-color: #fff;
   color: #222;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: var(--text-font);
+  font-size: 15px;
+  line-height: 25px;
   padding: 0;
   margin: 0;
 }
@@ -55,6 +55,10 @@ img {
   height: auto;
 }
 
+*:focus {
+  outline: 2px dashed var(--text-color);
+  outline-offset: 2px;
+}
 
 /* CONTAINER  */
 .container {
@@ -73,4 +77,388 @@ img {
 }
 
 /* SIT-HEADER  */
+.site-hero-header-wrapper {
+  padding-top: 53px;
+  padding-bottom: 144px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-bottom: 160px;
+  background-image: url(../img/main-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5E158E;
+}
 
+.site-header {
+  padding-bottom: 143px;
+}
+
+.site-header-main-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-logo-link {
+  flex-shrink: 0;
+}
+.site-logo {
+  width: 192px;
+  height: 32px;
+  margin-right: auto;
+}
+
+.site-nav {
+  padding-left: 100px;
+}
+
+.header-nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav-link-item:not(:last-child) {
+  margin-right: 32px;
+}
+
+.site-nav-links {
+  display: inline-block;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.site-nav-links:active {
+  outline: none;
+}
+
+.site-nav-links:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.site-nav-links:active:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+.tipa-header {
+  width: 650px;
+}
+
+.site-main-heading {
+  margin: 0;
+  padding: 0;
+  padding: 38px;
+  border: 2px solid var(--text-color);
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  font-size: 72px;
+  line-height: 70px;
+  font-weight: 300;
+}
+
+
+/* MAIN-CONTENT  */
+/* HERO-ONE  */
+.hero-one-main-wrapper {
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 184px;
+}
+
+.hero-one {
+  background-image: url(../img/hero-bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left;
+}
+
+
+.hero-one-white-box {
+  display: flex;
+  padding-top: 183px;
+  padding-left: 570px;
+}
+
+.hero-one-info-wrapper {
+flex-grow: 1;
+  background-color: var(--text-color);
+  padding-top: 96px;
+  padding-left: 96px;
+}
+
+.hero-one-main-heading {
+  margin: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+.hero-one-main-paragraph {
+  --special-text-color: #555;
+  margin: 0;
+  color: var(--special-text-color);
+}
+
+
+/* HERO-TWO  */
+.hero-two-main-wrapper {
+  padding-bottom: 184px;
+}
+
+.hero-two-heading-and-link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 80px;
+}
+
+.hero-two-main-heading {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.button-link {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 37px;
+  padding-right: 43px;
+  border: 1px solid var(--special-text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--special-text-color);
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 5px;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+}
+
+.button-link:active {
+  background-color: var(--special-text-color);
+  color: var(--text-color);
+}
+
+.button-link:focus {
+  outline-color: var(--special-text-color);
+}
+
+.hero-two-img-cards-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.img-card-wrapper {
+  background-image: url(../img/hero-img/deep-earth.jpg);
+  color: var(--text-color);
+}
+
+.img-card-wrapper:nth-child(2) {
+  background-image: url(../img/hero-img/night-arcade.jpg);
+}
+
+.img-card-wrapper:nth-child(3) {
+  background-image: url(../img/hero-img/soccer-team-vr.jpg);
+}
+
+
+.img-card-wrapper:nth-child(4) {
+  background-image: url(../img/hero-img/the-grid.jpg);
+}
+
+.img-card-wrapper:nth-child(5) {
+  background-image: url(../img/hero-img/from-up-above-vr.jpg);
+}
+
+.img-card-wrapper:nth-child(6) {
+  background-image: url(../img/hero-img/pocket-boreals.jpg);
+}
+
+.img-card-wrapper:nth-child(7) {
+  background-image: url(../img/hero-img/the-curiosity.jpg);
+}
+
+.img-card-wrapper:nth-child(8) {
+  background-image: url(../img/hero-img/make-it-fisheye.jpg);
+}
+
+.img-card {
+  display: flex;
+  align-items: flex-end;
+  width: 256px;
+  height: 450px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 32px;
+}
+
+.img-card-heading {
+  margin: 0;
+  /* color: var(--text-color); */
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+/* SITE-FOOTER  */
+.site-footer {
+  background-color: var(--special-text-color);
+}
+.site-footer-wrapper {
+  padding-top: 44px;
+  padding-bottom: 43px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+.part-one {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.site-logo-footer {
+  flex-shrink: 0;
+  width: 144px;
+  height: 24px;
+}
+
+.social-media-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-left: 100px;
+}
+
+.social-media-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.social-logo {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.social-logo-link {
+  display: inline-block;
+  position: relative;
+}
+
+.social-logo-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.social-logo-link:active:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+.part-two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-nav-footer {
+  padding-right: 100px;
+}
+
+.site-main-information {
+  --special-text-color: #555;
+  color: var(--special-text-color);
+  white-space: nowrap;
+}
+
+
+/* RETINA-BG  */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .first-wrapper {
+    background-image: url(../img/main-bg@2x.jpg);
+  }
+
+  .hero-one {
+    background-image: url(../img/hero-bg-img@2x.jpg);
+  }
+
+  .img-card-wrapper {
+    background-image: url(../img/hero-img/deep-earth@2x.jpg);
+  }
+
+  .img-card-wrapper:nth-child(2) {
+    background-image: url(../img/hero-img/night-arcade@2x.jpg);
+  }
+
+  .img-card-wrapper:nth-child(3) {
+    background-image: url(../img/hero-img/soccer-team-vr@2x.jpg);
+  }
+
+
+  .img-card-wrapper:nth-child(4) {
+    background-image: url(../img/hero-img/the-grid@2x.jpg);
+  }
+
+  .img-card-wrapper:nth-child(5) {
+    background-image: url(../img/hero-img/from-up-above-vr@2x.jpg);
+  }
+
+  .img-card-wrapper:nth-child(6) {
+    background-image: url(../img/hero-img/pocket-boreals@2x.jpg);
+  }
+
+  .img-card-wrapper:nth-child(7) {
+    background-image: url(../img/hero-img/the-curiosity@2x.jpg);
+  }
+
+  .img-card-wrapper:nth-child(8) {
+    background-image: url(../img/hero-img/make-it-fisheye@2x.jpg);
+  }
+
+}
