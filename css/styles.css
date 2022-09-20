@@ -97,7 +97,7 @@ img {
 .site-header-main-wrapper {
   display: flex;
   justify-content: space-between;
-}
+} 
 
 .inner-wrapper {
   display: flex;
@@ -105,6 +105,8 @@ img {
 }
 
 .site-logo-link {
+  width: 192px;
+  height: 32px;
   flex-shrink: 0;
 }
 .site-logo {
@@ -126,6 +128,7 @@ img {
 
 .nav-link-item:not(:last-child) {
   margin-right: 32px;
+  margin-bottom: 741px;
 }
 
 .site-nav-links {
@@ -155,7 +158,7 @@ img {
   transition: transform 0.25s ease-out;
 }
 
-.site-nav-links:active:after {
+.site-nav-links:hover:after {
   transform: scaleX(1);
   transform-origin: bottom center;
 }
@@ -259,7 +262,7 @@ flex-grow: 1;
   transition: all 0.4s ease;
 }
 
-.button-link:active {
+.button-link:hover {
   background-color: var(--special-text-color);
   color: var(--text-color);
 }
@@ -277,37 +280,47 @@ flex-grow: 1;
   gap: 30px;
 }
 
-.img-card-wrapper {
+.img-card-wrapper-link {
+  text-decoration: none;
   background-image: url(../img/hero-img/deep-earth.jpg);
   color: var(--text-color);
+  transition: opacity 0.2s ease;
 }
 
-.img-card-wrapper:nth-child(2) {
+.img-card-wrapper-link:hover{
+  opacity: 0.7;
+}
+
+.img-card-wrapper-link:active{
+  opacity: 0.4;
+}
+
+.img-card-wrapper-link:nth-child(2) {
   background-image: url(../img/hero-img/night-arcade.jpg);
 }
 
-.img-card-wrapper:nth-child(3) {
+.img-card-wrapper-link:nth-child(3) {
   background-image: url(../img/hero-img/soccer-team-vr.jpg);
 }
 
 
-.img-card-wrapper:nth-child(4) {
+.img-card-wrapper-link:nth-child(4) {
   background-image: url(../img/hero-img/the-grid.jpg);
 }
 
-.img-card-wrapper:nth-child(5) {
+.img-card-wrapper-link:nth-child(5) {
   background-image: url(../img/hero-img/from-up-above-vr.jpg);
 }
 
-.img-card-wrapper:nth-child(6) {
+.img-card-wrapper-link:nth-child(6) {
   background-image: url(../img/hero-img/pocket-boreals.jpg);
 }
 
-.img-card-wrapper:nth-child(7) {
+.img-card-wrapper-link:nth-child(7) {
   background-image: url(../img/hero-img/the-curiosity.jpg);
 }
 
-.img-card-wrapper:nth-child(8) {
+.img-card-wrapper-link:nth-child(8) {
   background-image: url(../img/hero-img/make-it-fisheye.jpg);
 }
 
@@ -334,6 +347,7 @@ flex-grow: 1;
 /* SITE-FOOTER  */
 .site-footer {
   background-color: var(--special-text-color);
+  background-size: cover;
 }
 .site-footer-wrapper {
   padding-top: 44px;
@@ -390,7 +404,7 @@ flex-grow: 1;
   transition: transform 0.25s ease-out;
 }
 
-.social-logo-link:active:after {
+.social-logo-link:hover:after {
   transform: scaleX(1);
   transform-origin: bottom center;
 }
@@ -416,7 +430,7 @@ flex-grow: 1;
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
